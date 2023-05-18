@@ -64,7 +64,7 @@ public class OtzovikParser {
     private String getDate(String date) {
         String resultDate = Optional.ofNullable(date)
                 .filter(d -> !date.contains("год"))
-                .map(d -> d + ", " + LocalDateTime.now().getYear() + "год")
+                .map(d -> d + ", " + LocalDateTime.now().getYear() + " год")
                 .map(d -> StringUtils.substringAfter(d, ", "))
                 .orElse(StringUtils.EMPTY);
 
