@@ -31,4 +31,8 @@ public class Review extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;
+
+    @ManyToOne
+    @JoinColumn(name = "usr_id")
+    private User user;
 }
